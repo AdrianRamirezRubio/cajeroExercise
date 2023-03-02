@@ -1,0 +1,8 @@
+{"billetes":[
+    {"tipo":1000,
+    "cantidad":50
+    },
+    {"tipo":500,
+    "cantidad":50
+    }]
+}

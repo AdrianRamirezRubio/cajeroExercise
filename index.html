@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://releases.jquery.com/git/jquery-git.slim.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="cajero.js"></script>
+    <style type="text/css">
+        /* label focus color */
+        .input-field input[type=text]:focus + label {
+        color: #ffffff !important;
+        }
+        /* label underline focus color */
+        .input-field input[type=text]:focus {
+            border-bottom: 1px solid #ffffff !important;
+            box-shadow: 0 1px 0 0 #ffffff !important;
+            color:azure !important;
+        }
+
+        html {
+        color: rgba(255, 255, 255, 0.87);
+        }
+        button, input, optgroup, select, textarea {
+            color: white;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body onload="loaded();">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="card indigo darken-1 ">
+                    <div class="card-content">
+                        <span class="card-title">
+                            <h3>ATM-Cajero.</h3>
+                        </span>
+                            <div class="row">
+
+                                <div class="input-field col m6">
+                                    <input id="monto" type="number" class="validate" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                    <label for="monto">Cantidad</label>
+                                </div>
+                                <div class="input-field col m6">
+                                    <button class="btn waves-effect waves-light" type="button" onclick="retira()" name="action">
+                                        Retirar
+                                    </button>
+                                </div>
+                            </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" id="ticket1">
+            
+        </div>
+        <div id="a1">
+            <button  class="btn waves-effect waves-light" type="button" onclick="reload()" >
+                Nuevo Retiro
+            </button>
+        </div>
+    </div>
+    
+    
+
+</body>
+
+</html>
